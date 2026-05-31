@@ -6,13 +6,16 @@
 
 <title>Loose Strings Quartet | Wedding Music Northern Ireland</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<meta name="description" content="Loose Strings Quartet provides elegant live string music for weddings and ceremonies across Northern Ireland, creating timeless musical moments for your special day.">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
 :root{
---black:#111111;
+--black:#111;
 --gold:#C8A85D;
---soft:#F7F7F7;
+--light:#ffffff;
+--soft:#f7f7f7;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -32,21 +35,22 @@ background:white;
 border-bottom:1px solid #eee;
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:15px 8%;
 z-index:1000;
 }
 
 nav .brand{
 font-family:'Playfair Display',serif;
-font-weight:500;
 letter-spacing:1px;
+font-size:18px;
 }
 
 nav a{
 text-decoration:none;
 color:var(--black);
-margin:0 12px;
-font-size:16px;
+margin:0 10px;
+font-size:15px;
 }
 
 nav a:hover{color:var(--gold);}
@@ -57,7 +61,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:120px 20px 80px;
+padding:140px 20px 80px;
 }
 
 .hero{
@@ -66,20 +70,20 @@ max-width:900px;
 
 h1{
 font-family:'Playfair Display',serif;
-font-size:4.5rem;
+font-size:4.3rem;
 font-weight:500;
 }
 
 .handwritten{
 font-family:'Great Vibes',cursive;
-font-size:2.2rem;
+font-size:2.4rem;
 color:var(--gold);
 margin:10px 0 25px;
 }
 
 .tagline{
-font-size:1.3rem;
-max-width:700px;
+font-size:1.25rem;
+max-width:750px;
 margin:auto;
 }
 
@@ -89,14 +93,14 @@ padding:90px 10%;
 
 h2{
 font-family:'Playfair Display',serif;
-font-size:3rem;
+font-size:2.8rem;
 text-align:center;
 margin-bottom:25px;
 }
 
 p{
 font-size:1.15rem;
-max-width:850px;
+max-width:900px;
 margin:auto;
 text-align:center;
 }
@@ -115,33 +119,51 @@ background:white;
 }
 
 .card h3{
-margin-bottom:10px;
 font-family:'Playfair Display',serif;
+margin-bottom:12px;
+font-size:1.5rem;
 }
 
 .price{
 color:var(--gold);
-font-size:2rem;
+font-size:1.8rem;
 margin:10px 0;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:18px;
+margin-top:40px;
 }
 
 .gallery img{
 width:100%;
 height:280px;
 object-fit:cover;
-border-radius:6px;
+border-radius:4px;
 }
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:20px;
-margin-top:40px;
+.faq{
+max-width:900px;
+margin:auto;
+}
+
+details{
+border:1px solid #eee;
+padding:18px;
+margin-bottom:12px;
+}
+
+summary{
+cursor:pointer;
+font-weight:600;
 }
 
 .contact{
-background:var(--black);
+background:#111;
 color:white;
+text-align:center;
 }
 
 .contact h2{color:white;}
@@ -150,12 +172,13 @@ footer{
 text-align:center;
 padding:30px;
 border-top:1px solid #eee;
+font-size:14px;
 }
 
+/* logo */
 .logo{
-margin-bottom:25px;
+margin-bottom:20px;
 }
-
 </style>
 </head>
 
@@ -168,6 +191,7 @@ margin-bottom:25px;
 <a href="#weddings">Weddings</a>
 <a href="#pricing">Pricing</a>
 <a href="#gallery">Gallery</a>
+<a href="#faq">FAQ</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
@@ -178,22 +202,39 @@ margin-bottom:25px;
 
 <div class="logo">
 
-<!-- VIOLIN + CELLO LOGO -->
-<svg width="260" height="120" viewBox="0 0 260 120">
+<!-- REALISTIC LINE ART LOGO -->
+<svg width="300" height="140" viewBox="0 0 300 140">
 
 <!-- Violin -->
-<path d="M60 10 C30 40,30 80,60 110 C90 80,90 40,60 10"
-stroke="#C8A85D" stroke-width="2" fill="none"/>
+<path d="M70 15
+C40 45,40 95,70 125
+C100 95,100 45,70 15"
+stroke="#111" stroke-width="2" fill="none"/>
 
 <!-- Cello -->
-<path d="M140 15 C110 50,110 85,140 110 C170 85,170 50,140 15"
-stroke="#C8A85D" stroke-width="2" fill="none"/>
+<path d="M150 20
+C120 55,120 100,150 125
+C180 100,180 55,150 20"
+stroke="#111" stroke-width="2" fill="none"/>
 
-<!-- Music notes -->
-<circle cx="200" cy="40" r="4" fill="#C8A85D"/>
-<line x1="200" y1="40" x2="200" y2="10" stroke="#C8A85D"/>
-<circle cx="220" cy="60" r="4" fill="#C8A85D"/>
-<line x1="220" y1="60" x2="220" y2="30" stroke="#C8A85D"/>
+<!-- Strings -->
+<line x1="65" y1="25" x2="65" y2="120" stroke="#111" stroke-width="1"/>
+<line x1="70" y1="20" x2="70" y2="125" stroke="#111" stroke-width="1"/>
+<line x1="75" y1="25" x2="75" y2="120" stroke="#111" stroke-width="1"/>
+
+<line x1="145" y1="30" x2="145" y2="120" stroke="#111" stroke-width="1"/>
+<line x1="150" y1="25" x2="150" y2="125" stroke="#111" stroke-width="1"/>
+<line x1="155" y1="30" x2="155" y2="120" stroke="#111" stroke-width="1"/>
+
+<!-- Notes -->
+<circle cx="220" cy="45" r="4" fill="#111"/>
+<line x1="220" y1="45" x2="220" y2="15" stroke="#111"/>
+
+<circle cx="240" cy="65" r="4" fill="#111"/>
+<line x1="240" y1="65" x2="240" y2="35" stroke="#111"/>
+
+<circle cx="260" cy="50" r="4" fill="#111"/>
+<line x1="260" y1="50" x2="260" y2="20" stroke="#111"/>
 
 </svg>
 
@@ -201,10 +242,10 @@ stroke="#C8A85D" stroke-width="2" fill="none"/>
 
 <div class="handwritten">Loose Strings Quartet</div>
 
-<h1>Your Wedding, Your Music</h1>
+<h1>Music for Your Wedding Day</h1>
 
 <p class="tagline">
-Elegant live string music to make your wedding day unforgettable — from the first guest arriving to your final walk together as newlyweds.
+Elegant live string music designed to complement every moment of your wedding day — from the quiet anticipation of arrival to the joy of your first celebration together.
 </p>
 
 </div>
@@ -216,24 +257,25 @@ Elegant live string music to make your wedding day unforgettable — from the fi
 <h2>About Us</h2>
 
 <p>
-Loose Strings Quartet is a professional wedding string quartet based in Holywood, County Down.
-We believe music should do more than fill a space — it should shape emotion, create atmosphere, and make moments feel timeless.
+Loose Strings Quartet is a professional wedding string ensemble based in Holywood, County Down, performing throughout Northern Ireland.
+We specialise in creating refined, live musical experiences that feel effortless, emotional, and deeply connected to your day.
 </p>
 
 <br>
 
 <p>
-From intimate church ceremonies to elegant country estates and modern venues across Northern Ireland, we provide carefully arranged live string music designed to make your wedding feel deeply personal and unforgettable.
+Our musicians bring years of classical training and performance experience, combined with a passion for modern wedding music.
+We believe the best performances are never intrusive — they are felt, not forced, enhancing every moment without overwhelming it.
 </p>
 
 </section>
 
 <section id="weddings">
 
-<h2>Making Your Wedding Day Special</h2>
+<h2>Your Wedding, Beautifully Scored</h2>
 
 <p>
-Every wedding has its own rhythm. We tailor our music to match each part of your day, creating a seamless emotional journey for you and your guests.
+Every wedding tells a different story. Our role is to provide the soundtrack — subtle, elegant, and perfectly matched to your atmosphere.
 </p>
 
 <div class="grid">
@@ -241,21 +283,24 @@ Every wedding has its own rhythm. We tailor our music to match each part of your
 <div class="card">
 <h3>The Ceremony</h3>
 <p>
-The moment everything begins. As your guests take their seats, soft live strings set the tone — calm, elegant, and full of anticipation.
+Soft string music as your guests arrive sets a calm and elegant tone.
+Each note is chosen to reflect the emotion of the moment and the importance of what is about to unfold.
 </p>
 </div>
 
 <div class="card">
-<h3>The Entrance</h3>
+<h3>The Bridal Entrance</h3>
 <p>
-Your walk down the aisle is one of the most powerful moments of your life. We shape that moment with music chosen entirely around you.
+One of the most meaningful moments of your life deserves music that feels entirely your own.
+We help you choose a piece that reflects your story and enhances the moment without distraction.
 </p>
 </div>
 
 <div class="card">
 <h3>The Celebration</h3>
 <p>
-From confetti moments to drinks receptions, we bring warmth, joy, and sophistication to your celebration.
+As you step into married life, live music continues through drinks receptions and gatherings,
+adding warmth, elegance, and a sense of effortless celebration.
 </p>
 </div>
 
@@ -268,7 +313,8 @@ From confetti moments to drinks receptions, we bring warmth, joy, and sophistica
 <h2>Wedding Packages</h2>
 
 <p>
-Clear, simple pricing designed to suit different parts of your wedding day. Every couple is different, so we also offer bespoke arrangements.
+Our packages are designed to suit different stages of your wedding day.
+Every booking includes personal consultation to ensure your music feels completely tailored.
 </p>
 
 <div class="grid">
@@ -276,19 +322,25 @@ Clear, simple pricing designed to suit different parts of your wedding day. Ever
 <div class="card">
 <h3>Ceremony</h3>
 <div class="price">From £595</div>
-<p>Music for your aisle entrance, signing, and exit. Carefully planned with your chosen pieces.</p>
+<p>
+A complete ceremony music experience, including guest arrival, processional, signing, and exit music.
+</p>
 </div>
 
 <div class="card">
 <h3>Ceremony + Drinks</h3>
 <div class="price">From £795</div>
-<p>Includes ceremony music plus elegant background music for your drinks reception.</p>
+<p>
+Extend the atmosphere beyond the ceremony with elegant background music for your drinks reception.
+</p>
 </div>
 
 <div class="card">
-<h3>Full Day</h3>
+<h3>Full Day Experience</h3>
 <div class="price">From £995</div>
-<p>Music throughout your ceremony and reception, creating a continuous atmosphere of elegance.</p>
+<p>
+A seamless musical presence across your ceremony and reception, shaping the atmosphere throughout your day.
+</p>
 </div>
 
 </div>
@@ -297,35 +349,55 @@ Clear, simple pricing designed to suit different parts of your wedding day. Ever
 
 <section id="gallery">
 
-<h2>Weddings We’ve Played</h2>
+<h2>Weddings & Venues</h2>
+
+<p>
+From historic churches to modern venues and countryside estates, our music has accompanied celebrations across Northern Ireland.
+</p>
 
 <div class="gallery">
 
-<img src="https://images.unsplash.com/photo-1529634597503-139d3726fed5?auto=format&fit=crop&w=900&q=80" alt="Church wedding">
-
-<img src="https://images.unsplash.com/photo-1523438097201-512ae7d59c2a?auto=format&fit=crop&w=900&q=80" alt="Wedding flowers">
-
-<img src="https://images.unsplash.com/photo-1509927083803-4bd519298ac4?auto=format&fit=crop&w=900&q=80" alt="Wedding bouquet">
-
-<img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80" alt="Church aisle">
+<img src="https://images.unsplash.com/photo-1529634597503-139d3726fed5?auto=format&fit=crop&w=900&q=80">
+<img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=900&q=80">
+<img src="https://images.unsplash.com/photo-1523438097201-512ae7d59c2a?auto=format&fit=crop&w=900&q=80">
+<img src="https://images.unsplash.com/photo-1509927083803-4bd519298ac4?auto=format&fit=crop&w=900&q=80">
 
 </div>
 
 </section>
 
-<section>
+<section id="faq">
 
-<h2>Testimonials</h2>
+<h2>Frequently Asked Questions</h2>
 
-<p>
-“Every piece felt perfectly chosen for each moment of the day. It made our ceremony unforgettable.”
-</p>
+<div class="faq">
 
-<br>
+<details>
+<summary>Can we choose our own music?</summary>
+<p>Yes. We work closely with every couple to select music that reflects your personal style and story.</p>
+</details>
 
-<p>
-“The music completely transformed the atmosphere — emotional, elegant, and so beautifully played.”
-</p>
+<details>
+<summary>How far do you travel?</summary>
+<p>We perform across all of Northern Ireland including Belfast, County Down, County Antrim and surrounding areas.</p>
+</details>
+
+<details>
+<summary>Do you perform outdoors?</summary>
+<p>Yes, provided suitable shelter and weather conditions are in place to protect instruments.</p>
+</details>
+
+<details>
+<summary>How long do you typically play for?</summary>
+<p>Performances vary depending on your package, from ceremony-only sets to several hours across your wedding day.</p>
+</details>
+
+<details>
+<summary>Do you need anything provided?</summary>
+<p>We require four armless chairs and a sheltered, level performance space.</p>
+</details>
+
+</div>
 
 </section>
 
@@ -334,8 +406,8 @@ Clear, simple pricing designed to suit different parts of your wedding day. Ever
 <h2>Get In Touch</h2>
 
 <p>
-Based in Holywood, Northern Ireland<br>
-Available across Belfast, County Down & beyond
+Based in Holywood, County Down<br>
+Available across Belfast and Northern Ireland
 </p>
 
 <br>
@@ -348,7 +420,7 @@ Phone: +44 0000 000000
 </section>
 
 <footer>
-© 2026 Loose Strings Quartet
+© 2026 Loose Strings Quartet — Wedding String Music Northern Ireland
 </footer>
 
 </body>
