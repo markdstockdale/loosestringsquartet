@@ -1,427 +1,692 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Loose Strings Quartet | Wedding Music Northern Ireland</title>
+  <title>Loose Strings Quartet | Belfast</title>
 
-<meta name="description" content="Loose Strings Quartet provides elegant live string music for weddings and ceremonies across Northern Ireland, creating timeless musical moments for your special day.">
+  <meta
+    name="description"
+    content="Loose Strings Quartet — beautiful live string music for weddings and special occasions in Belfast and across Northern Ireland."
+  >
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #111111;
+      --grey: #666666;
+      --light-grey: #e9e9e9;
+      --white: #ffffff;
+    }
 
-<style>
-:root{
---black:#111;
---gold:#C8A85D;
---light:#ffffff;
---soft:#f7f7f7;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-*{margin:0;padding:0;box-sizing:border-box;}
+    html { scroll-behavior: smooth; }
 
-body{
-font-family:'Cormorant Garamond',serif;
-background:white;
-color:var(--black);
-line-height:1.8;
-}
+    body {
+      background: var(--white);
+      color: var(--black);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+    }
 
-nav{
-position:fixed;
-top:0;
-width:100%;
-background:white;
-border-bottom:1px solid #eee;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 8%;
-z-index:1000;
-}
+    .page {
+      width: min(1400px, calc(100% - 80px));
+      margin: 0 auto;
+    }
 
-nav .brand{
-font-family:'Playfair Display',serif;
-letter-spacing:1px;
-font-size:18px;
-}
+    header {
+      min-height: 230px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 42px 0 35px;
+      gap: 40px;
+    }
 
-nav a{
-text-decoration:none;
-color:var(--black);
-margin:0 10px;
-font-size:15px;
-}
+    .tagline {
+      align-self: flex-end;
+      max-width: 520px;
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+    }
 
-nav a:hover{color:var(--gold);}
+    .brand {
+      text-align: right;
+      margin-left: auto;
+    }
 
-header{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:140px 20px 80px;
-}
+    .brand h1 {
+      font-size: clamp(2rem, 4vw, 4.2rem);
+      font-weight: 400;
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+    }
 
-.hero{
-max-width:900px;
-}
+    .brand p,
+    .eyebrow,
+    .section-number,
+    .price-note,
+    .social-links {
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-h1{
-font-family:'Playfair Display',serif;
-font-size:4.3rem;
-font-weight:500;
-}
+    .brand p {
+      margin-top: 12px;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
 
-.handwritten{
-font-family:'Great Vibes',cursive;
-font-size:2.4rem;
-color:var(--gold);
-margin:10px 0 25px;
-}
+    .hero,
+    .photo {
+      width: 100%;
+      overflow: hidden;
+    }
 
-.tagline{
-font-size:1.25rem;
-max-width:750px;
-margin:auto;
-}
+    .hero img,
+    .photo img {
+      display: block;
+      width: 100%;
+      height: auto;
+      filter: grayscale(100%);
+    }
 
-section{
-padding:90px 10%;
-}
+    main { padding-bottom: 100px; }
 
-h2{
-font-family:'Playfair Display',serif;
-font-size:2.8rem;
-text-align:center;
-margin-bottom:25px;
-}
+    section {
+      padding: 105px 0;
+      border-bottom: 1px solid var(--light-grey);
+    }
 
-p{
-font-size:1.15rem;
-max-width:900px;
-margin:auto;
-text-align:center;
-}
+    .section-grid {
+      display: grid;
+      grid-template-columns: 30% 1fr;
+      gap: 70px;
+    }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-margin-top:50px;
-}
+    .section-number {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--grey);
+      padding-top: 8px;
+    }
 
-.card{
-border:1px solid #eee;
-padding:30px;
-background:white;
-}
+    h2 {
+      font-size: clamp(2.2rem, 4vw, 4rem);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -0.045em;
+      margin-bottom: 30px;
+    }
 
-.card h3{
-font-family:'Playfair Display',serif;
-margin-bottom:12px;
-font-size:1.5rem;
-}
+    h3 {
+      font-size: 1.45rem;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
 
-.price{
-color:var(--gold);
-font-size:1.8rem;
-margin:10px 0;
-}
+    .copy,
+    .setlist-intro,
+    .contact-text {
+      max-width: 780px;
+      font-size: 1.15rem;
+    }
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:18px;
-margin-top:40px;
-}
+    .copy p + p { margin-top: 22px; }
 
-.gallery img{
-width:100%;
-height:280px;
-object-fit:cover;
-border-radius:4px;
-}
+    .photo { margin-top: 75px; }
 
-.faq{
-max-width:900px;
-margin:auto;
-}
+    /* Set list */
+    .setlist-intro { margin-bottom: 42px; }
 
-details{
-border:1px solid #eee;
-padding:18px;
-margin-bottom:12px;
-}
+    .setlist {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      border-top: 1px solid var(--black);
+    }
 
-summary{
-cursor:pointer;
-font-weight:600;
-}
+    .setlist li {
+      list-style: none;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--light-grey);
+      font-size: 1.02rem;
+    }
 
-.contact{
-background:#111;
-color:white;
-text-align:center;
-}
+    .setlist li:nth-child(odd) { margin-right: 35px; }
 
-.contact h2{color:white;}
+    .setlist li::before {
+      content: "—";
+      margin-right: 12px;
+    }
 
-footer{
-text-align:center;
-padding:30px;
-border-top:1px solid #eee;
-font-size:14px;
-}
+    /* Testimonials */
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 55px 70px;
+    }
 
-/* logo */
-.logo{
-margin-bottom:20px;
-}
-</style>
+    .testimonial {
+      border-top: 1px solid var(--black);
+      padding-top: 20px;
+    }
+
+    .testimonial blockquote {
+      font-size: 1.18rem;
+      line-height: 1.55;
+    }
+
+    .testimonial cite {
+      display: block;
+      margin-top: 18px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.72rem;
+      font-style: normal;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--grey);
+    }
+
+    .sample-note {
+      margin-top: 55px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.72rem;
+      line-height: 1.5;
+      letter-spacing: 0.04em;
+      color: var(--grey);
+      max-width: 700px;
+    }
+
+    /* Pricing */
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 70px;
+      border-top: 1px solid var(--black);
+    }
+
+    .package {
+      padding: 28px 0 32px;
+      border-bottom: 1px solid var(--light-grey);
+    }
+
+    .package-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      align-items: baseline;
+      margin-bottom: 12px;
+    }
+
+    .price {
+      white-space: nowrap;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+    }
+
+    .package p {
+      font-size: 1rem;
+      max-width: 600px;
+    }
+
+    .package ul {
+      margin-top: 16px;
+      padding-left: 18px;
+    }
+
+    .package li {
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+    }
+
+    .price-note {
+      margin-top: 30px;
+      max-width: 800px;
+      font-size: 0.72rem;
+      line-height: 1.6;
+      letter-spacing: 0.03em;
+      color: var(--grey);
+    }
+
+    /* Contact */
+    .contact {
+      border-bottom: 0;
+      padding-bottom: 55px;
+    }
+
+    .contact h2 { max-width: 700px; }
+
+    .contact-details {
+      margin-top: 35px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 35px 70px;
+      max-width: 800px;
+    }
+
+    .detail-label {
+      display: block;
+      margin-bottom: 7px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--grey);
+    }
+
+    .detail-value {
+      font-size: 1.05rem;
+    }
+
+    .detail-value a {
+      color: var(--black);
+      text-decoration: none;
+      border-bottom: 1px solid var(--black);
+    }
+
+    .social-links {
+      margin-top: 42px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .social-links a {
+      color: var(--black);
+      text-decoration: none;
+      border-bottom: 1px solid var(--black);
+      padding-bottom: 4px;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    footer {
+      padding: 25px 0 45px;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--grey);
+    }
+
+    @media (max-width: 800px) {
+      .page { width: min(100% - 40px, 1400px); }
+
+      header {
+        min-height: 270px;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .brand { order: -1; }
+      .tagline { align-self: flex-start; }
+
+      .section-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      section { padding: 75px 0; }
+
+      .setlist,
+      .testimonials,
+      .pricing,
+      .contact-details {
+        grid-template-columns: 1fr;
+      }
+
+      .setlist li:nth-child(odd) { margin-right: 0; }
+
+      .testimonials { gap: 45px; }
+    }
+
+    @media (max-width: 500px) {
+      .page { width: calc(100% - 30px); }
+
+      header { padding-top: 25px; }
+
+      .brand h1 { font-size: 2.25rem; }
+
+      .hero img {
+        min-height: 300px;
+        object-fit: cover;
+      }
+
+      .copy,
+      .setlist-intro,
+      .contact-text {
+        font-size: 1.05rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
-<nav>
-<div class="brand">Loose Strings Quartet</div>
-<div>
-<a href="#about">About</a>
-<a href="#weddings">Weddings</a>
-<a href="#pricing">Pricing</a>
-<a href="#gallery">Gallery</a>
-<a href="#faq">FAQ</a>
-<a href="#contact">Contact</a>
-</div>
-</nav>
-
-<header>
-
-<div class="hero">
-
-<div class="logo">
-
-<!-- REALISTIC LINE ART LOGO -->
-<svg width="300" height="140" viewBox="0 0 300 140">
-
-<!-- Violin -->
-<path d="M70 15
-C40 45,40 95,70 125
-C100 95,100 45,70 15"
-stroke="#111" stroke-width="2" fill="none"/>
-
-<!-- Cello -->
-<path d="M150 20
-C120 55,120 100,150 125
-C180 100,180 55,150 20"
-stroke="#111" stroke-width="2" fill="none"/>
-
-<!-- Strings -->
-<line x1="65" y1="25" x2="65" y2="120" stroke="#111" stroke-width="1"/>
-<line x1="70" y1="20" x2="70" y2="125" stroke="#111" stroke-width="1"/>
-<line x1="75" y1="25" x2="75" y2="120" stroke="#111" stroke-width="1"/>
-
-<line x1="145" y1="30" x2="145" y2="120" stroke="#111" stroke-width="1"/>
-<line x1="150" y1="25" x2="150" y2="125" stroke="#111" stroke-width="1"/>
-<line x1="155" y1="30" x2="155" y2="120" stroke="#111" stroke-width="1"/>
-
-<!-- Notes -->
-<circle cx="220" cy="45" r="4" fill="#111"/>
-<line x1="220" y1="45" x2="220" y2="15" stroke="#111"/>
-
-<circle cx="240" cy="65" r="4" fill="#111"/>
-<line x1="240" y1="65" x2="240" y2="35" stroke="#111"/>
-
-<circle cx="260" cy="50" r="4" fill="#111"/>
-<line x1="260" y1="50" x2="260" y2="20" stroke="#111"/>
-
-</svg>
-
-</div>
-
-<div class="handwritten">Loose Strings Quartet</div>
-
-<h1>Music for Your Wedding Day</h1>
-
-<p class="tagline">
-Elegant live string music designed to complement every moment of your wedding day — from the quiet anticipation of arrival to the joy of your first celebration together.
-</p>
-
-</div>
-
-</header>
-
-<section id="about">
-
-<h2>About Us</h2>
-
-<p>
-Loose Strings Quartet is a professional wedding string ensemble based in Holywood, County Down, performing throughout Northern Ireland.
-We specialise in creating refined, live musical experiences that feel effortless, emotional, and deeply connected to your day.
-</p>
-
-<br>
-
-<p>
-Our musicians bring years of classical training and performance experience, combined with a passion for modern wedding music.
-We believe the best performances are never intrusive — they are felt, not forced, enhancing every moment without overwhelming it.
-</p>
-
-</section>
-
-<section id="weddings">
-
-<h2>Your Wedding, Beautifully Scored</h2>
-
-<p>
-Every wedding tells a different story. Our role is to provide the soundtrack — subtle, elegant, and perfectly matched to your atmosphere.
-</p>
-
-<div class="grid">
-
-<div class="card">
-<h3>The Ceremony</h3>
-<p>
-Soft string music as your guests arrive sets a calm and elegant tone.
-Each note is chosen to reflect the emotion of the moment and the importance of what is about to unfold.
-</p>
-</div>
-
-<div class="card">
-<h3>The Bridal Entrance</h3>
-<p>
-One of the most meaningful moments of your life deserves music that feels entirely your own.
-We help you choose a piece that reflects your story and enhances the moment without distraction.
-</p>
-</div>
-
-<div class="card">
-<h3>The Celebration</h3>
-<p>
-As you step into married life, live music continues through drinks receptions and gatherings,
-adding warmth, elegance, and a sense of effortless celebration.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="pricing">
-
-<h2>Wedding Packages</h2>
-
-<p>
-Our packages are designed to suit different stages of your wedding day.
-Every booking includes personal consultation to ensure your music feels completely tailored.
-</p>
-
-<div class="grid">
-
-<div class="card">
-<h3>Ceremony</h3>
-<div class="price">From £595</div>
-<p>
-A complete ceremony music experience, including guest arrival, processional, signing, and exit music.
-</p>
-</div>
-
-<div class="card">
-<h3>Ceremony + Drinks</h3>
-<div class="price">From £795</div>
-<p>
-Extend the atmosphere beyond the ceremony with elegant background music for your drinks reception.
-</p>
-</div>
-
-<div class="card">
-<h3>Full Day Experience</h3>
-<div class="price">From £995</div>
-<p>
-A seamless musical presence across your ceremony and reception, shaping the atmosphere throughout your day.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="gallery">
-
-<h2>Weddings & Venues</h2>
-
-<p>
-From historic churches to modern venues and countryside estates, our music has accompanied celebrations across Northern Ireland.
-</p>
-
-<div class="gallery">
-
-<img src="https://images.unsplash.com/photo-1529634597503-139d3726fed5?auto=format&fit=crop&w=900&q=80">
-<img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=900&q=80">
-<img src="https://images.unsplash.com/photo-1523438097201-512ae7d59c2a?auto=format&fit=crop&w=900&q=80">
-<img src="https://images.unsplash.com/photo-1509927083803-4bd519298ac4?auto=format&fit=crop&w=900&q=80">
-
-</div>
-
-</section>
-
-<section id="faq">
-
-<h2>Frequently Asked Questions</h2>
-
-<div class="faq">
-
-<details>
-<summary>Can we choose our own music?</summary>
-<p>Yes. We work closely with every couple to select music that reflects your personal style and story.</p>
-</details>
-
-<details>
-<summary>How far do you travel?</summary>
-<p>We perform across all of Northern Ireland including Belfast, County Down, County Antrim and surrounding areas.</p>
-</details>
-
-<details>
-<summary>Do you perform outdoors?</summary>
-<p>Yes, provided suitable shelter and weather conditions are in place to protect instruments.</p>
-</details>
-
-<details>
-<summary>How long do you typically play for?</summary>
-<p>Performances vary depending on your package, from ceremony-only sets to several hours across your wedding day.</p>
-</details>
-
-<details>
-<summary>Do you need anything provided?</summary>
-<p>We require four armless chairs and a sheltered, level performance space.</p>
-</details>
-
-</div>
-
-</section>
-
-<section id="contact" class="contact">
-
-<h2>Get In Touch</h2>
-
-<p>
-Based in Holywood, County Down<br>
-Available across Belfast and Northern Ireland
-</p>
-
-<br>
-
-<p>
-Email: hello@loosestringsquartet.co.uk<br>
-Phone: +44 0000 000000
-</p>
-
-</section>
-
-<footer>
-© 2026 Loose Strings Quartet — Wedding String Music Northern Ireland
-</footer>
-
+  <div class="page">
+
+    <header>
+      <p class="tagline">Beautiful music for your special day</p>
+
+      <div class="brand">
+        <h1>Loose Strings Quartet</h1>
+        <p>Belfast · Northern Ireland</p>
+      </div>
+    </header>
+
+    <div class="hero">
+      <img src="images/quartet-hero.jpg" alt="Loose Strings Quartet performing together">
+    </div>
+
+    <main>
+
+      <!-- ABOUT -->
+      <section>
+        <div class="section-grid">
+          <div class="section-number">01 · About</div>
+
+          <div class="copy">
+            <h2>Music for moments that matter</h2>
+
+            <p>
+              Loose Strings is a Belfast-based string quartet made up of two
+              violins, viola and cello, available for weddings, civil
+              partnerships, parties and other special occasions.
+            </p>
+
+            <p>
+              The quartet's repertoire spans the Baroque, Classical and
+              Romantic periods, alongside much-loved music from musicals,
+              films and popular artists.
+            </p>
+
+            <p>
+              From the moment your guests arrive to the ceremony, drinks
+              reception or wedding breakfast, live strings can create an
+              elegant and personal atmosphere that becomes part of the
+              memories of your day.
+            </p>
+          </div>
+        </div>
+
+        <div class="photo">
+          <img src="images/quartet-secondary.jpg" alt="Loose Strings Quartet with their instruments">
+        </div>
+      </section>
+
+      <!-- SET LIST -->
+      <section>
+        <div class="section-grid">
+          <div class="section-number">02 · Repertoire</div>
+
+          <div>
+            <h2>Sample set list</h2>
+
+            <p class="setlist-intro">
+              We will work with you to create the perfect soundtrack to your
+              special day. Choose from timeless classical favourites, romantic
+              film themes, contemporary pop, Irish favourites and songs that
+              simply mean something to you. If your favourite isn't on the
+              list, ask us — we'd be delighted to discuss it.
+            </p>
+
+            <ul class="setlist">
+              <li>Canon in D — Pachelbel</li>
+              <li>A Thousand Years — Christina Perri</li>
+              <li>All of Me — John Legend</li>
+              <li>At Last — Etta James</li>
+              <li>Can't Help Falling in Love — Elvis Presley</li>
+              <li>Chasing Cars — Snow Patrol</li>
+              <li>Hallelujah — Leonard Cohen</li>
+              <li>Here Comes the Sun — The Beatles</li>
+              <li>Here, There and Everywhere — The Beatles</li>
+              <li>How Long Will I Love You — Ellie Goulding</li>
+              <li>I Don't Want to Miss a Thing — Aerosmith</li>
+              <li>Isn't She Lovely — Stevie Wonder</li>
+              <li>La Vie En Rose — Édith Piaf</li>
+              <li>Love Me Tender — Elvis Presley</li>
+              <li>Make You Feel My Love — Adele</li>
+              <li>Moon River — Henry Mancini</li>
+              <li>Perfect — Ed Sheeran</li>
+              <li>She — Elvis Costello</li>
+              <li>Shallow — Lady Gaga & Bradley Cooper</li>
+              <li>Stand by Me — Ben E. King</li>
+              <li>Take My Breath Away — Berlin</li>
+              <li>Tenerife Sea — Ed Sheeran</li>
+              <li>The Book of Love — Peter Gabriel</li>
+              <li>The Greatest Day — Take That</li>
+              <li>Unchained Melody — The Righteous Brothers</li>
+              <li>Viva La Vida — Coldplay</li>
+              <li>What a Wonderful World — Louis Armstrong</li>
+              <li>Wildest Dreams — Taylor Swift</li>
+              <li>Wonderful Tonight — Eric Clapton</li>
+              <li>You Are the Reason — Calum Scott</li>
+              <li>Young and Beautiful — Lana Del Rey</li>
+              <li>You've Got the Love — Florence + The Machine</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section>
+        <div class="section-grid">
+          <div class="section-number">03 · Testimonials</div>
+
+          <div>
+            <h2>Kind words</h2>
+
+            <div class="testimonials">
+
+              <article class="testimonial">
+                <blockquote>
+                  “The music was absolutely beautiful and made the ceremony
+                  feel so personal. We still talk about the moment we heard
+                  our chosen song as we walked in.”
+                </blockquote>
+                <cite>Aoife & Ciarán · Belfast</cite>
+              </article>
+
+              <article class="testimonial">
+                <blockquote>
+                  “Loose Strings were wonderful from start to finish. They
+                  helped us choose the music, were completely professional
+                  and created such a lovely atmosphere for our guests.”
+                </blockquote>
+                <cite>Charlotte & James · Manchester</cite>
+              </article>
+
+              <article class="testimonial">
+                <blockquote>
+                  “We wanted a mixture of classical music and a few Indian
+                  favourites, and the quartet were so accommodating. The
+                  music during our drinks reception was one of the highlights
+                  of the day.”
+                </blockquote>
+                <cite>Priya & Arjun · Dublin</cite>
+              </article>
+
+              <article class="testimonial">
+                <blockquote>
+                  “Having live strings at our wedding was something we had
+                  always dreamed of. The music was elegant, warm and
+                  completely inclusive — it set the tone for the whole day.”
+                </blockquote>
+                <cite>Daniel & Michael · Belfast</cite>
+              </article>
+
+            </div>
+
+            <p class="sample-note">
+              SAMPLE COPY FOR DESIGN PURPOSES — these testimonials are
+              fictional placeholders and should be replaced with genuine
+              client feedback before the website is published.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section>
+        <div class="section-grid">
+          <div class="section-number">04 · Pricing</div>
+
+          <div>
+            <h2>Choose your music</h2>
+
+            <div class="pricing">
+
+              <article class="package">
+                <div class="package-top">
+                  <h3>Ceremony</h3>
+                  <span class="price">From £470</span>
+                </div>
+                <p>A beautiful live soundtrack for your ceremony.</p>
+                <ul>
+                  <li>Music as guests arrive</li>
+                  <li>Your chosen entrance and exit music</li>
+                  <li>Music during the signing of the register</li>
+                  <li>Hymns can be accommodated where appropriate</li>
+                </ul>
+              </article>
+
+              <article class="package">
+                <div class="package-top">
+                  <h3>Ceremony + Drinks Reception</h3>
+                  <span class="price">From £710</span>
+                </div>
+                <p>Live music throughout your ceremony and drinks reception.</p>
+                <ul>
+                  <li>Everything included in the ceremony package</li>
+                  <li>Live background music during your drinks reception</li>
+                  <li>A selection tailored to you and your guests</li>
+                </ul>
+              </article>
+
+              <article class="package">
+                <div class="package-top">
+                  <h3>Full Wedding Day</h3>
+                  <span class="price">From £1,030</span>
+                </div>
+                <p>
+                  Music for the ceremony, drinks reception and wedding
+                  breakfast.
+                </p>
+                <ul>
+                  <li>Music across the key parts of your day</li>
+                  <li>Personalised repertoire</li>
+                  <li>Ideal for couples who want live strings throughout</li>
+                </ul>
+              </article>
+
+              <article class="package">
+                <div class="package-top">
+                  <h3>Reception / Special Event</h3>
+                  <span class="price">Bespoke</span>
+                </div>
+                <p>
+                  A tailored package for drinks receptions, parties,
+                  anniversaries and other celebrations.
+                </p>
+                <ul>
+                  <li>Flexible playing time</li>
+                  <li>Music selected around your event</li>
+                  <li>Travel and additional requirements discussed in advance</li>
+                </ul>
+              </article>
+
+            </div>
+
+            <p class="price-note">
+              DRAFT PRICING NOTE: the figures above are based on the package
+              structure and published quartet prices on the Arco String
+              Quartet website, and are included as a temporary guide only.
+              They should be replaced with Loose Strings' own confirmed
+              prices before publication. Final pricing can vary according to
+              location, duration and requirements.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="contact">
+        <div class="section-grid">
+          <div class="section-number">05 · Contact</div>
+
+          <div>
+            <h2>Let's make it memorable.</h2>
+
+            <p class="contact-text">
+              Tell us about your date, venue and the music you have in mind.
+              We'd love to help you create a soundtrack that feels completely
+              personal to your day.
+            </p>
+
+            <div class="contact-details">
+
+              <div>
+                <span class="detail-label">Based in</span>
+                <span class="detail-value">Belfast, Northern Ireland</span>
+              </div>
+
+              <div>
+                <span class="detail-label">Email</span>
+                <span class="detail-value">
+                  <a href="mailto:YOUR-EMAIL-HERE">YOUR-EMAIL-HERE</a>
+                </span>
+              </div>
+
+              <div>
+                <span class="detail-label">Phone</span>
+                <span class="detail-value">
+                  <a href="tel:YOUR-PHONE-HERE">YOUR-PHONE-HERE</a>
+                </span>
+              </div>
+
+              <div>
+                <span class="detail-label">Social</span>
+                <span class="detail-value">Facebook & Instagram</span>
+              </div>
+
+            </div>
+
+            <div class="social-links">
+              <!-- Replace the # links with the actual Loose Strings profiles. -->
+              <a href="#" target="_blank" rel="noopener">Facebook</a>
+              <a href="#" target="_blank" rel="noopener">Instagram</a>
+            </div>
+
+            <p class="price-note">
+              CONTACT DETAILS NOTE: I could verify the Belfast-based Loose
+              Strings description and repertoire online, but I could not
+              reliably verify the current Facebook page's phone number,
+              email address or Instagram URL from publicly indexed sources.
+              These are therefore left as placeholders rather than inventing
+              contact information.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <span>Loose Strings Quartet</span>
+      <span>Belfast · Northern Ireland</span>
+    </footer>
+
+  </div>
 </body>
 </html>
